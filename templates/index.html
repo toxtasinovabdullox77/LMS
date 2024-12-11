@@ -1,0 +1,517 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>Online IT, Dizayn va Marketing Kurslari</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img class="sss" src="static/rasm.papka/images__2_-removebg-preview.png" alt="">
+        <div class="logo">OCS</div>
+        <div class="top-buttons">
+            <div class="search-container">
+                <img src="static/rasm.papka/image_2024-11-04_10-47-577777777777777.png" alt="search icon">
+                <input type="text" placeholder="Search...">
+            </div>
+            <a href="/Online Oquv Markaz Royxat/index.html"
+                style="background-color: transparent; 
+                text-decoration: none; margin-top: 9px; margin-right: 15px; color: #007BFF; ">
+                Ro'yxatdan  o'tish</a>
+            <a href="#footer" class="top-button">Maslahat olish</a>
+            <a href="#" class="uz-button">UZ</a> 
+        </div>
+    </header>
+
+    <div class="hero">
+        <img src="static/rasm.papka/information-technology-hdr.jpg.webp" alt="Kurslar Rasm">
+        <div class="hero-content">
+            <h1>Onlayn IT, dizayn
+                <br>
+                va Marketing
+                <br>
+                kurslarini sotish
+            </h1>
+        </div>
+    </div>
+
+    <div class="courses">
+        <h2>Eng yaxshi o'quv kurslar:</h2>
+        <div class="divvv">
+            <a href="#" class="course-button">Barcha Yo'nalishlar</a>
+            <a href="#" class="course-button">Dizayn</a>
+            <a href="#" class="course-button">Backend</a>
+            <a href="#" class="course-button">Frontend</a>
+            <a href="#" class="course-button">Mobil</a>
+        </div>
+    </div>
+    {% for course in courses %}
+    <div>
+    <!-- <div class="papasi">
+
+        <div id="border">
+            <div class="cart">
+                <div class="row">
+                    <img src="{{course.image.url}}" alt="">
+                    <div class="cart_but">
+                        <button class="Detail">
+                          <a href="/AboutPg/About.html"> Batafsil</a>
+                        </button>
+                        <button>Sotib Olish</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text">
+                <p>Kurs Nomi: {{course.name}}</p>
+                <p>O'qish muddati:{{ course.duration }}</p>
+                <p>Oylik To'lov: {{ course.price }}</p>
+                <br>
+            {% endfor %}
+            </div>
+        </div> -->
+
+        <div class="container">
+
+            <div class="wrapper">
+                {% for course in courses %}
+                <div id="border">
+                    <div class="cart">
+                        <div class="row">
+                            <div class="cartImg">
+                                <img src="{{course.image.url}}" alt="">
+                            </div>
+                            <div class="cart_but">
+                                <button class="Detail">
+                                  <a href="/AboutPg/About.html"> Batafsil</a>
+                                </button>
+                                <button>Sotib Olish</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="text">
+                        <p>Kurs Nomi: {{course.name}}</p>
+                        <p>O'qish muddati:{{ course.duration }} oy</p>
+                        <p>Oylik To'lov: {{ course.price }} so'm</p>
+                        <br>
+                        <!-- <img src="images 7.png" alt="" class="icons"> -->
+                        <!-- <span>123</span> -->
+                    </div>
+        
+        
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+            
+     
+        <!-- <div id="border">
+            <div class="cart">
+                <div class="row">
+                    <img class="pythonn" src="static/rasm.papka/Python-Symbolllllllllllll.png" alt="">
+                    <div class="cart_but">
+                        <button class="Detail"> 
+                          <a href="/Python/Python.html">Batafsil</a> 
+                        </button>
+                        <button>Sotib Olish</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text">
+                <p>Kurs Nomi: Python</p>
+                <p>O’qish muddati: 3 oy</p>
+                <p>Oylik To’lov: 800 000 so’m</p>
+                <br>
+                <img src="" alt="">
+            </div>
+        </div>
+
+        <div id="border">
+            <div class="cart">
+                <div class="row">
+                    <img src="static/rasm.papka/0b780168f9aca7ced566032c14ebe23f.png" alt="">
+                    <div class="cart_but">
+                        <button class="Detail"> 
+                          <a href="/Java/Java.html">Batafsil</a>
+                        </button>
+                        <button>Sotib Olish</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="text">
+                <p>Kurs Nomi: Java</p>
+                <p>O’qish muddati: 3 oy</p>
+                <p>Oylik To’lov: 850 000 so’m</p>
+                <br>
+            </div>
+
+        </div>
+
+        <div id="border">
+            <div class="cart">
+                <div class="row">
+                    <img src="static/rasm.papka/HTML5_logo_and_wordmark.svg.png" alt="">
+                    <div class="cart_but">
+                        <button class="Detail">
+                          <a href="/Html/Html.html">Batafsil</a>
+                        </button>
+                        <button>Sotib Olish</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="text">
+                <p>Kurs Nomi: HTML</p>
+                <p>O’qish muddati: 1 oy</p>
+                <p>Oylik To’lov: 400 000 so’m</p>
+                <br>
+            </div>
+
+        </div>
+
+        <div id="border">
+            <div class="cart">
+                <div class="row">
+                    <img src="static/rasm.papka/creative-css3-tutorials.jpg" alt="">
+                    <div class="cart_but">
+                        <button class="Detail">
+                          <a href="/Css/Css.html">Batafsil</a>  
+                        </button>
+                        <button>Sotib Olish</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="text">
+                <p>Kurs Nomi: CSS</p>
+                <p>O’qish muddati: 2 oy</p>
+                <p>Oylik To’lov: 500 000 so’m</p>
+                <br>
+            </div>
+
+        </div>
+
+        <div id="border">
+            <div class="cart">
+                <div class="row">
+                    <img src="static/rasm.papka/React.jpg" alt="">
+                    <div class="cart_but">
+                        <button class="Detail">
+                          <a href="/React/React.html">Batafsil</a>
+                        </button>
+                        <button>Sotib Olish</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="text">
+                <p>Kurs Nomi: React JS</p>
+                <p>O’qish muddati: 3 oy</p>
+                <p>Oylik To’lov: 600 000 so’m</p>
+                <br>
+            </div>
+
+        </div>
+
+        <div id="border">
+            <div class="cart">
+                <div class="row">
+                    <img src="static/rasm.papka/logo-vuejs-9686556.png" alt="">
+                    <div class="cart_but">
+                        <button class="Detail">
+                            <a href="/Vuejs/Vuejs.html">Batafsil</a>
+                        </button>
+                        <button>Sotib Olish</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="text">
+                <p>Kurs Nomi: VUE JS</p>
+                <p>O’qish muddati: 3 oy</p>
+                <p>Oylik To’lov: 700 000 so’m</p>
+                <br>
+            </div> -->
+
+        <!-- </div>
+
+        <div id="border">
+            <div class="cart">
+                <div class="row">
+                    <img src="static/rasm.papka/Androidddd.png" alt="">
+                    <div class="cart_but">
+                        <button class="Detail">
+                            <a href="/Android/Android.html">Batafsil</a>
+                        </button>
+                        <button>Sotib Olish</button>
+                    </div>
+                </div>
+
+              
+            </div>
+
+        
+
+        </div>
+
+        <div id="border">
+            <div class="cart">
+                <div class="row">
+                    <img src="static/rasm.papka/uiux-design-1024x680 UIIII.webp" alt="">
+                    <div class="cart_but">
+                        <button class="Detail">
+                            <a href="/UIUX/UXUI.html">Batafsil</a>
+                        </button>
+                        <button>Sotib Olish</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="text">
+                <p>Kurs Nomi: UX/UI Dizayn</p>
+                <p>O’qish muddati: 3 oy</p>
+                <p>Oylik To’lov: 700 000 so’m</p>
+                <br> -->
+            </div>
+    </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="kurslar">
+        <button>Ko'proq Kurslar </button>
+    </div>
+
+    <div id="kokkk">
+        <h1 class="hhh">Kimga mos keladi:</h1>
+        <div class="glavnni">
+            <div class="imggg">
+                <img src="static/rasm.papka/6615037abef262d380256e7d_for-who-1.png" alt="">
+                <h4 class="xxx">O'z vaqtini qadrlaydigan
+                    <br> va
+                    uni to'g'ri boshqarishni
+                    <br>
+                    biladiganlar uchun
+                </h4>
+            </div>
+            <div class="imggg">
+                <img src="static/rasm.papka/6615037cfbf3132ac2bb3cdc_for-who-2.png" alt="">
+                <h4 class="xxx">START olishni xohlovchi
+                    <br>
+                    talabalar uchun
+                </h4>
+            </div>
+            <div class="imggg">
+                <img src="static/rasm.papka/661503889255bf0b9db608d3_for-who-3.png" alt="">
+                <h4 class="xxx">O'z malakasini oshirmoqchi
+                    <br>
+                    bo'lgan mutaxassislar
+                    uchun
+                </h4>
+            </div>
+            <div class="imggg">
+                <img src="static/rasm.papka/66150388be61d1ef9c44529d_for-who-4.png" alt="">
+                <h4 class="xxx">Yangi kasbni kashf qilishni
+                    <br>
+                    xohlovchilar uchun
+                </h4>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h1 class="hhhh"> Nima uchun Online Course Stools -ni
+            <br> tanlaysiz?
+        </h1>
+        <div class="kotta">
+            <div>
+                <div class="pnggg">
+                    <img src="static/rasm.papka/png-transparent-check-mark-check-marks-blue-text-technology-thumbnail-removebg-preview.png"
+                        alt="">
+                    <p>Joriy tarkib</p>
+                </div>
+                <div class="pnggg">
+                    <img src="static/rasm.papka/png-transparent-check-mark-check-marks-blue-text-technology-thumbnail-removebg-preview.png"
+                        alt="">
+                    <p>Onlayn jonli muloqot</p>
+                </div>
+                <div class="pnggg">
+                    <img src="static/rasm.papka/png-transparent-check-mark-check-marks-blue-text-technology-thumbnail-removebg-preview.png"
+                        alt="">
+                    <p>Doimiy amaliyot</p>
+                </div>
+                <div class="pnggg">
+                    <img src="static/rasm.papka/png-transparent-check-mark-check-marks-blue-text-technology-thumbnail-removebg-preview.png"
+                        alt="">
+                    <p>Uslubiy materiallar</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="pnggg">
+                    <img src="static/rasm.papka/png-transparent-check-mark-check-marks-blue-text-technology-thumbnail-removebg-preview.png"
+                        alt="">
+                    <p>Ishga joylashishda yordam</p>
+                </div>
+                <div class="pnggg">
+                    <img src="static/rasm.papka/png-transparent-check-mark-check-marks-blue-text-technology-thumbnail-removebg-preview.png"
+                        alt="">
+                    <p>Foizsiz to'lovlar</p>
+                </div>
+                <div class="pnggg">
+                    <img src="static/rasm.papka/png-transparent-check-mark-check-marks-blue-text-technology-thumbnail-removebg-preview.png"
+                        alt="">
+                    <p>Biz sizga yo'nalishni tanlashda
+                        <br> yordam beramiz
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="karlo">
+    
+        <div id="footer" class="ppppp">
+
+            <div id="" class="oqborder">
+                <h1>Maslahat olish uchun </h1>
+
+                <div class="input">
+                    <input class="placeholder" type="text" placeholder="Ism">
+                    <input class="placeholder" type="text" placeholder="Telefon">
+                    <input class="placeholder" type="text" placeholder="Email">
+                    <button class="butt">Yuborish</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script>
+            
+              document.getElementById("scrollToFooter").addEventListener("click", function() {
+              document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
+            });
+        </script>
+
+
+
+         <div class="hrr"> 
+            <hr>
+         </div>
+
+
+        
+        <div class="footer">
+
+            <div class="footer-left">
+                <h3>Online Course Stools</h3>
+                <p class="mmmm">+998 (78) 113 62 72</p>
+                <p class="mmm">Toshkent shahar, <br> Yakkasaroy tumani, <br>Muminov ko‘chasi, 4A</p>
+            </div>
+
+            <div class="footer-middle">
+
+                <div class="topp">
+                    <h4 class="mmm">Platforma</h4>
+                <a href="#">Kasblar</a>
+                <a href="#">Kurslar</a>
+                </div>
+
+                <div class="topp">
+                    <h4 class="mmm">Kompaniya</h4>
+                    <a href="#">Biz haqimizda</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Ommaviy oferta</a>
+                    <a href="#">Maxfiylik siyosati</a>
+                </div>
+                
+                <div class="topp">
+                    
+                    <h4 class="mmm">Ma'lumot</h4>
+                    <a href="#">Bog'lanish</a>
+                    <a href="#">Bo'lib to'lash</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Fikrlar</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hrrr"> 
+            <hr>
+        </div>
+
+        <div class="foter">
+
+            <div class="iconss">
+                    <img src="static/rasm.papka/53-530160_join-the-conversation-telegram-logo-white-png-transparent-removebg-preview.png">
+                    <img src="static/rasm.papka/hd-white-outline-round-instagram-logo-icon-png-70111111-removebg-preview.png" alt="">
+                    <img src="static/rasm.papka/0-492_youtube-icon-white-png-transparent-png-removebg-preview.png">
+                    <img src="static/rasm.papka/m2H7N4N4b1K9b1Z5-removebg-preview.png">
+                    <!-- <img class="instag" src="png-transparent-instagram-logo-logo-computer-icons-brand-instagram-logo-miscellaneous-white-text-removebg-preview.png" alt=""> -->
+            </div>
+
+            <div class="xx">
+                <h3>© Online Course Stool 2024.</h3>
+            </div>
+
+           <div class="social">
+
+            <img src="static/rasm.papka/SOLIQQQ.png" alt="">
+            <img src="static/rasm.papka/UZCARDDD.jpg" alt="">
+            <img src="static/rasm.papka/og-image.png" alt="">
+            <img class="zzz" src="static/rasm.papka/Clickkk.jpg" alt="">
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
+
